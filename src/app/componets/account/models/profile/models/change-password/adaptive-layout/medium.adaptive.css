@@ -1,0 +1,15 @@
+@media (min-width: 768px) and (max-width: 991px){
+  .modal-header{
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .modal-heading{
+    font-size: 24px !important;
+  }
+
+  .modal-content{
+    padding: 24px !important;
+  }
+
+}

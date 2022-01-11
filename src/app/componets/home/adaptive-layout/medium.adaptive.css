@@ -1,0 +1,14 @@
+@media (min-width: 768px) and (max-width: 991px){
+
+  .sb-left-side{
+    width: 100% !important;
+  }
+
+  .sb-right-side{
+    width: 100% !important;
+  }
+
+  .tb-content{
+    flex-direction: column !important;
+  }
+}

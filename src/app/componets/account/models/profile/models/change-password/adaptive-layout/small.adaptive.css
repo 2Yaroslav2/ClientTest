@@ -1,0 +1,17 @@
+@media (min-width: 576px) and (max-width: 767px){
+  ::ng-deep .cdk-overlay-pane{
+    max-width: 100% !important;
+  }
+
+  ::ng-deep .mat-dialog-content{
+    max-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  ::ng-deep .mat-dialog-container{
+    padding: 0 !important;
+    border-radius: 0 !important;
+  }
+
+}

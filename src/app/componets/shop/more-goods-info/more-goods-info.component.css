@@ -1,0 +1,209 @@
+@import "adaptive-layout/extra-small.adaptive.css";
+
+ul{
+  list-style: none;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.product-about{
+  display: flex;
+  flex-direction: column;
+}
+
+.head{
+  display: flex;
+  /*position: relative;*/
+  flex-direction: row;
+}
+
+.product-heading{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding: 16px 8px 8px;
+}
+
+.product-title{
+  font-size: 36px;
+  line-height: 43px;
+  font-family: Rozetka,BlinkMacSystemFont,-apple-system,Arial,Segoe UI,Roboto,Helvetica,sans-serif;
+}
+
+.product-about-left{
+  width: 50%;
+  padding-right: 24px;
+}
+
+.main-gallery-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.picture-container{
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.border-line{
+  border-bottom: 1px solid #e9e9e9;
+  width: 100%;
+}
+
+.product-about-right{
+  width: 50%;
+  padding-left: 24px;
+}
+
+.product-about-block{
+  margin-bottom: 24px;
+  border: 1px solid #e9e9e9;
+  border-radius: 4px;
+}
+
+.product-trade{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  align-items: center;
+}
+
+.product-prices-inner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*align-items: center;*/
+  padding-top: 16px;
+  margin-right: 16px;
+  margin-bottom: 0;
+}
+
+.product-prices-big{
+  width: auto;
+  font-size: 36px;
+  line-height: 1;
+  margin: 0 !important;
+}
+
+.product-prices-symbol{
+  font-size: 24px;
+  margin-left: 4px;
+}
+
+.product-buttons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.product-buttons-item{
+  width: auto;
+  padding-top: 16px;
+}
+
+.buy-button{
+  width: 100%;
+}
+
+button.button{
+  line-height: normal;
+}
+
+.button-with-icon{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button-color-green{
+  background-color: #00a046;
+  color: #fff;
+}
+
+.button-size-large{
+  font-size: 18px;
+  height: 48px;
+}
+
+.button{
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: BlinkMacSystemFont,-apple-system,Arial,Segoe UI,Roboto,Helvetica,sans-serif;
+  margin: 0;
+  outline: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: center;
+  transition: all .2s ease-in-out;
+}
+
+.svg-options{
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+.product-about-description{
+  margin-bottom: 24px;
+}
+
+.product-tabs-heading{
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.product-tabs-heading-color{
+  color: #d2d2d2;
+}
+
+.product-about-description-context{
+  line-height: 1.9em;
+  color: #595959;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.text{
+  font-size: 14px;
+}
+
+.footer{
+  margin-top: 15px;
+}
+
+.height-medium{
+  height: 3rem !important;
+}
+
+.head-title{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.head-title-font {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 32px;
+  font-family: "Montserrat",sans-serif;
+}
+
+.error-message{
+  color: #f84147;
+  font-size: 12px;
+  margin-top: 4px;
+}

@@ -1,0 +1,25 @@
+@media (max-width: 575px) {
+  .left-block{
+    display: none !important;
+  }
+
+  .container{
+    width: 100% !important;
+    padding: 2% !important;
+  }
+
+  .wrapper{
+    padding: 0px !important;
+  }
+
+  .right-block{
+    padding: 5px !important;
+    border: none !important;
+  }
+
+
+  .view-block-false{
+    display: block !important;
+  }
+
+}

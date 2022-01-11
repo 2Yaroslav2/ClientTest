@@ -1,0 +1,15 @@
+@media (min-width: 768px) and (max-width: 991px){
+  .personal-section-heading svg{
+    margin-right: 16px !important;
+  }
+  .personal-data-item{
+    width: 100% !important;
+    margin-bottom: 16px !important;
+    padding: 0px !important;
+  }
+
+  .personal-data{
+    padding: 0px !important;
+  }
+
+}

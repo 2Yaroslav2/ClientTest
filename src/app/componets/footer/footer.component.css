@@ -1,0 +1,62 @@
+@import "adaptive-layout/extra-small.adaptive.css";
+@import "adaptive-layout/small.adaptive.css";
+@import "adaptive-layout/medium.adaptive.css";
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.footer-custom{
+  background-color: #1f1c1c;
+  color: #b6afaf;
+}
+
+.footer-wrap{
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-font{
+  font-family: "Montserrat",sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+
+.height-medium{
+  height: 3rem !important;
+}
+
+.contact-description{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  word-wrap: break-word;
+}
+
+.contact-info span{
+  margin-bottom: 1em;
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info img {
+  margin-right: 5px;
+}
+
+
+.sc-content-container{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.sc-content-container div{
+  margin: 15px;
+  max-width: 400px;
+}

@@ -1,0 +1,16 @@
+@media (min-width: 768px) and (max-width: 991px){
+  .second-block{
+    padding: 0% !important;
+  }
+
+  .third-block{
+    padding: 0% !important;
+  }
+
+  .sb-content{
+    flex-direction: column;
+  }
+  .tb-content{
+    flex-direction: column !important;
+  }
+}

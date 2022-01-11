@@ -1,0 +1,93 @@
+<mat-dialog-content class="mat-typography">
+  <div class="modal-header">
+    <h3 class="modal-heading">{{'EDIT-GOODS.HEADER' | translate}}</h3>
+    <button class="modal-close" (click)="closeWindowAddGoods()">
+      <svg viewBox="0 0 24 24">
+        <path d="m18.295 7.11511c.3894-.38936.3894-1.02064 0-1.41-.3893-.38936-1.0206-.38936-1.41 0l-4.885
+          4.88499-4.88499-4.88499c-.38936-.38936-1.02063-.38936-1.41 0-.38936.38936-.38936 1.02064 0 1.41l4.88499
+          4.88499-4.88499 4.885c-.38936.3894-.38936 1.0206 0 1.41.38937.3894 1.02064.3894 1.41 0l4.88499-4.885 4.885
+          4.885c.3894.3894 1.0207.3894 1.41 0 .3894-.3894.3894-1.0206 0-1.41l-4.885-4.885z"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="head-title head-title-font" *ngIf="flagErrors">
+    <ul class="error-message">
+      <li *ngFor="let error of errors">
+        <h4>{{error.description}}</h4>
+      </li>
+    </ul>
+  </div>
+
+  <div class="head-title head-title-font" *ngIf="flagErrorsFV">
+    <ul class="error-message">
+      <li *ngFor="let error of errorsFV">
+        <ul>
+          <li *ngFor="let errorValue of error.value">
+            <p>{{errorValue.errorMessage}}</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="head-title head-title-font" *ngIf="flagErrorZero">
+    <h3 class="error-message">{{errorZero}}</h3>
+  </div>
+
+  <div class="modal-content">
+    <div class="modal">
+      <form class="modal-form" [formGroup]="form">
+        <fieldset>
+          <div class="form-row">
+            <label class="form-label">{{'ADD-GOODS.TRANSLATE.NAME' | translate}}</label>
+            <input formControlName="name" type="text" placeholder="{{'PLACEHOLDER.ADD-GOODS.NAME' | translate}}"/>
+            <p class="error-message" *ngIf="name!.invalid">{{getErrorMessageName()}}</p>
+          </div>
+          <div class="form-row">
+            <label class="form-label">{{'ADD-GOODS.TRANSLATE.PRICE' | translate}}</label>
+            <input formControlName="price" type="number" placeholder="{{'PLACEHOLDER.ADD-GOODS.PRICE' | translate}}"/>
+            <p class="error-message" *ngIf="price!.invalid">{{getErrorMessagePrice()}}</p>
+          </div>
+          <div class="form-row">
+            <label class="form-label">{{'ADD-GOODS.TRANSLATE.NUMBER-OF-DAYS' | translate}}</label>
+            <input formControlName="numberOfDays" type="number" placeholder="{{'PLACEHOLDER.ADD-GOODS.NUMBER-OF-DAYS' | translate}}"/>
+            <p class="error-message" *ngIf="numberOfDays!.invalid">{{getErrorMessageNumberOfDays()}}</p>
+          </div>
+          <div class="form-row">
+            <label class="form-label">{{'ADD-GOODS.TRANSLATE.QUANTITY-IN-STOCK' | translate}}</label>
+            <input formControlName="quantityInStock" type="number" placeholder="{{'PLACEHOLDER.ADD-GOODS.QUANTITY-IN-STOCK' | translate}}"/>
+            <p class="error-message" *ngIf="quantityInStock!.invalid">{{getErrorMessageQuantityInStock()}}</p>
+          </div>
+          <div class="form-row">
+            <label class="form-label">{{'ADD-GOODS.TRANSLATE.CATEGORY-ID' | translate}}</label>
+            <input formControlName="categoryId" type="number" placeholder="{{'PLACEHOLDER.ADD-GOODS.CATEGORY-ID' | translate}}"/>
+            <p class="error-message" *ngIf="categoryId!.invalid">{{getErrorMessageCategoryId()}}</p>
+          </div>
+          <div class="form-row">
+            <label class="form-label">{{'ADD-GOODS.TRANSLATE.DISCOUNT' | translate}}</label>
+            <input formControlName="discount" type="number" placeholder="{{'PLACEHOLDER.ADD-GOODS.DISCOUNT' | translate}}"/>
+            <p class="error-message" *ngIf="discount!.invalid">{{getErrorMessageDiscount()}}</p>
+          </div>
+          <div class="form-row">
+            <label class="form-label">{{'ADD-GOODS.TRANSLATE.IMAGE' | translate}}</label>
+            <input formControlName="image" type="text" placeholder="{{'PLACEHOLDER.ADD-GOODS.IMAGE' | translate}}"/>
+            <p class="error-message" *ngIf="image!.invalid">{{getErrorMessageImage()}}</p>
+          </div>
+
+          <div class="form-row modal-form-bottom">
+            <button [disabled]="!form.valid"
+                    type="submit"
+                    class="button
+                    button-color-green
+                    auth-modal-submit
+                    button-large" (click)="onEditGoodsClick()">{{'ADD-GOODS.TRANSLATE.SAVE' | translate}}</button>
+            <button class="auth-modal-register-link
+                           button button-link" (click)="closeWindowAddGoods()">{{'ADD-GOODS.TRANSLATE.CANCEL' | translate}}</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</mat-dialog-content>
+

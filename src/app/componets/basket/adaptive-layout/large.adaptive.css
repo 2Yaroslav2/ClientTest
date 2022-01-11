@@ -1,0 +1,12 @@
+@media (min-width: 992px) and (max-width: 1199px){
+  .container{
+    min-width: 600px;
+    width: auto !important;
+  }
+
+  .body-center{
+    width: auto !important;
+    margin-right: 10px !important;
+  }
+
+}

@@ -1,0 +1,21 @@
+.container{
+  width: 100%;
+  /*flex: 1 1 auto;*/
+}
+.wrapper{
+  /*overflow: hidden;*/
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.my-footer{
+  margin-top: auto;
+}
+
+.sticky-for-head{
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  /*width: 100%;*/
+}

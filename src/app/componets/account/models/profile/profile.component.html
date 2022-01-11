@@ -1,0 +1,275 @@
+<div class="cabinet-personal-information">
+  <div class="cabinet-heading">
+    <h1>{{'ACCOUNT.PROFILE.TITLE' | translate}}</h1>
+  </div>
+
+  <div class="cabinet-user-information">
+    <section class="personal-section">
+      <div class="personal-section-header">
+        <h3 class="personal-section-heading">
+          <svg viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 14.2173 2.72083 16.2651 3.94221 17.9235C4.92261 16.0046 6.57304 14.4833 8.58609 13.6645C7.59985
+                  12.7521 6.98201 11.449 6.98201 10C6.98201 7.23435 9.23287 5 12 5C14.7671 5 17.018 7.23435 17.018 10C17.018 11.449 16.4001 12.7521 15.4139 13.6645C17.427
+                  14.4833 19.0774 16.0046 20.0578 17.9235C21.2792 16.2651 22 14.2173 22 12C22 6.47715 17.5228 2
+                  12 2ZM18.5844 19.5265C17.5805 16.8826 15.0118 15 12 15C8.98818 15 6.41953 16.8826 5.41557 19.5265C7.17529 21.0674 9.47791
+                  22 12 22C14.5221 22 16.8247 21.0674 18.5844 19.5265ZM0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12C24 15.3377
+                  22.6361 18.3586 20.4376 20.5327C18.271 22.6753 15.2892 24 12 24C8.71079 24 5.72901 22.6753 3.56237 20.5327C1.36394 18.3586 0 15.3377 0
+                  12ZM12 7C10.329 7 8.98201 8.34737 8.98201 10C8.98201 11.6526 10.329 13 12 13C13.671 13 15.018 11.6526 15.018 10C15.018 8.34737 13.671 7 12 7Z" fill="#293644"/>
+          </svg>
+          <span>{{'ACCOUNT.PROFILE.BLOCK-PERSONAL-DATA.TITLE' | translate}}</span>
+        </h3>
+        <button class="button button-medium button-link button-with-icon personal-section-edit"
+                [class.view-block-false]="states.states['EditPersonalDataP']"
+                (click)="states.selectEditProfileData()">
+          <svg viewBox="0 0 50 50" >
+            <g>
+              <path d="M18.293,31.707h6.414l24-24l-6.414-6.414l-24,24V31.707z M45.879,7.707l-3.586,3.586l-3.586-3.586l3.586-3.586
+		                            L45.879,7.707z M20.293,26.121l17-17l3.586,3.586l-17,17h-3.586V26.121z"/>
+              <polygon points="43.293,19.707 41.293,19.707 41.293,46.707 3.293,46.707 3.293,8.707 31.293,8.707 31.293,6.707 1.293,6.707
+	                            	1.293,48.707 43.293,48.707"/>
+            </g>
+          </svg>
+          <span class="personal-section-edit-text button-edit-false">{{'ACCOUNT.PROFILE.BUTTON.EDIT' | translate}}</span>
+        </button>
+      </div>
+      <div class="error personal-data"
+           [class.view-block-false]="states.states['ErrorFVPersonalData']">
+        <ul>
+          <li *ngFor="let error of errorsFV">
+            <ul>
+              <li *ngFor="let errorValue of error.value">
+                <p>{{errorValue.errorMessage}}</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="error personal-data"
+           [class.view-block-false]="states.states['ErrorPersonalData']">
+        <ul>
+          <li *ngFor="let error of errors">
+            <p>{{error.description}}</p>
+          </li>
+        </ul>
+      </div>
+      <form [formGroup]="formProfileData">
+        <div class="personal-data">
+          <ul class="personal-data-list">
+            <li class="personal-data-item">
+              <label class="personal-data-label">{{'ACCOUNT.PROFILE.BLOCK-PERSONAL-DATA.NAME' | translate}}</label>
+              <p [class.view-block-false]="states.states['EditPersonalDataP']" class="personal-data-value">{{user.userName}}</p>
+              <div [class.view-block-false]="states.states['EditPersonalDataInput']">
+                <input matInput formControlName="name" type="text" placeholder="{{'PLACEHOLDER.NAME' | translate}}">
+                <p class="error-message" *ngIf="name!.invalid">{{getErrorMessageName()}}</p>
+              </div>
+            </li>
+          </ul>
+          <div [class.view-block-false]="states.states['EditPersonalDataSuccess']">
+            <p class="success">Successful</p>
+          </div>
+          <div [class.view-block-false]="states.states['EditPersonalDataInput']">
+            <div class="personal-data-footer">
+              <button class="button button-medium button-navy"
+                      [disabled]="!formProfileData.valid"
+                      (click)="saveNewProfileData()">{{'ACCOUNT.PROFILE.BUTTON.SAVE' | translate}}</button>
+              <button class="button button-medium button-link" (click)="states.selectEditProfileData()">{{'ACCOUNT.PROFILE.BUTTON.CANCEL' | translate}}</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <div class="cabinet-contacts">
+    <section class="personal-section">
+      <div class="personal-section-header">
+        <h3 class="personal-section-heading">
+          <svg viewBox="0 0 47.25 32"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title>Asset 16</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_2-2" data-name="Layer 2">
+                <rect class="cls-1" x="1" y="1" width="45.25" height="30" rx="1"/>
+                <path class="cls-1" d="M46.25,2l-22,17.78a1,1,0,0,1-1.29,0L1,2"/>
+                <line class="cls-1" x1="45.5" y1="31" x2="28.95" y2="16"/>
+                <line class="cls-1" x1="2" y1="31" x2="18" y2="16.5"/>
+              </g>
+            </g>
+          </svg>
+          <span>{{'ACCOUNT.PROFILE.BLOCK-CONTACTS.TITLE' | translate}}</span>
+        </h3>
+        <button class="button button-medium button-link button-with-icon personal-section-edit"
+                [class.view-block-false]="states.states['EditContactsP']"
+                (click)="states.selectEditContacts()">
+          <svg viewBox="0 0 50 50" >
+            <g>
+              <path d="M18.293,31.707h6.414l24-24l-6.414-6.414l-24,24V31.707z M45.879,7.707l-3.586,3.586l-3.586-3.586l3.586-3.586
+		                            L45.879,7.707z M20.293,26.121l17-17l3.586,3.586l-17,17h-3.586V26.121z"/>
+              <polygon points="43.293,19.707 41.293,19.707 41.293,46.707 3.293,46.707 3.293,8.707 31.293,8.707 31.293,6.707 1.293,6.707
+	                            	1.293,48.707 43.293,48.707"/>
+            </g>
+          </svg>
+          <span class="personal-section-edit-text button-edit-false">{{'ACCOUNT.PROFILE.BUTTON.EDIT' | translate}}</span>
+        </button>
+      </div>
+      <div class="error personal-data"
+           [class.view-block-false]="states.states['ErrorFVContacts']">
+        <ul>
+          <li *ngFor="let error of errorsFV">
+            <ul>
+              <li *ngFor="let errorValue of error.value">
+                <p>{{errorValue.errorMessage}}</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="error personal-data"
+           [class.view-block-false]="states.states['ErrorContacts']">
+        <ul>
+          <li *ngFor="let error of errors">
+            <p>{{error.description}}</p>
+          </li>
+        </ul>
+      </div>
+      <form [formGroup]="formContacts">
+        <div class="personal-data">
+          <ul class="personal-data-list">
+            <li class="personal-data-item">
+              <label class="personal-data-label">{{'ACCOUNT.PROFILE.BLOCK-CONTACTS.EMAIL' | translate}}</label>
+              <p [class.view-block-false]="states.states['EditContactsP']"
+                 class="personal-data-value">{{user.email}}</p>
+              <div [class.view-block-false]="states.states['EditContactsInput']">
+                <input matInput formControlName="email" type="email" placeholder="{{'PLACEHOLDER.EMAIL' | translate}}">
+                <p class="error-message" *ngIf="emailFormContacts!.invalid">{{getErrorMessageEmail()}}</p>
+              </div>
+            </li>
+          </ul>
+          <div [class.view-block-false]="states.states['EditContactsSuccess']">
+            <p class="success">Successful</p>
+          </div>
+          <div [class.view-block-false]="states.states['EditContactsInput']">
+            <div class="personal-data-footer">
+              <button class="button button-medium button-navy"
+                      [disabled]="!formContacts.valid"
+                      (click)="saveNewContacts()">{{'ACCOUNT.PROFILE.BUTTON.SAVE' | translate}}
+              </button>
+              <button class="button button-medium button-link" (click)="states.selectEditContacts()">{{'ACCOUNT.PROFILE.BUTTON.CANCEL' | translate}}</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <div class="cabinet-login">
+    <section class="personal-section">
+      <div class="personal-section-header">
+        <h3 class="personal-section-heading">
+          <svg viewBox="0 0 30 30">
+            <title>lock</title>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="icon-114-lock" fill="#000000">
+                <path d="M16,21.9146472 L16,24.5089948 C16,24.7801695 16.2319336,25 16.5,25 C16.7761424,25 17,24.7721195
+                 17,24.5089948 L17,21.9146472 C17.5825962,21.708729 18,21.1531095 18,20.5 C18,19.6715728 17.3284272,19
+                 16.5,19 C15.6715728,19 15,19.6715728 15,20.5 C15,21.1531095 15.4174038,21.708729 16,21.9146472 L16,21.9146472
+                 L16,21.9146472 Z M15,22.5001831 L15,24.4983244 C15,25.3276769 15.6657972,26 16.5,26 C17.3284271,26 18,25.3288106
+                 18,24.4983244 L18,22.5001831 C18.6072234,22.04408 19,21.317909 19,20.5 C19,19.1192881 17.8807119,18
+                 16.5,18 C15.1192881,18 14,19.1192881 14,20.5 C14,21.317909 14.3927766,22.04408 15,22.5001831 L15,22.5001831
+                 L15,22.5001831 Z M9,14.0000125 L9,10.499235 C9,6.35670485 12.3578644,3 16.5,3 C20.6337072,3 24,6.35752188
+                 24,10.499235 L24,14.0000125 C25.6591471,14.0047488 27,15.3503174 27,17.0094776 L27,26.9905224 C27,28.6633689
+                 25.6529197,30 23.991212,30 L9.00878799,30 C7.34559019,30 6,28.652611 6,26.9905224 L6,17.0094776 C6,15.339581
+                 7.34233349,14.0047152 9,14.0000125 L9,14.0000125 L9,14.0000125 Z M10,14 L10,10.4934269 C10,6.90817171
+                 12.9101491,4 16.5,4 C20.0825462,4 23,6.90720623 23,10.4934269 L23,14 L22,14 L22,10.5090731 C22,7.46649603
+                 19.5313853,5 16.5,5 C13.4624339,5 11,7.46140289 11,10.5090731 L11,14 L10,14 L10,14 Z M12,14 L12,10.5008537
+                 C12,8.0092478 14.0147186,6 16.5,6 C18.9802243,6 21,8.01510082 21,10.5008537 L21,14 L12,14 L12,14 L12,
+                 14 Z M8.99742191,15 C7.89427625,15 7,15.8970601 7,17.0058587 L7,26.9941413 C7,28.1019465 7.89092539,
+                 29 8.99742191,29 L24.0025781,29 C25.1057238,29 26,28.1029399 26,26.9941413 L26,17.0058587 C26,
+                 15.8980535 25.1090746,15 24.0025781,15 L8.99742191,15 L8.99742191,15 Z" id="lock" sketch:type="MSShapeGroup">
+                </path>
+              </g>
+            </g>
+          </svg>
+          <span>{{'ACCOUNT.PROFILE.BLOCK-LOGIN.TITLE' | translate}}</span>
+        </h3>
+        <button class="button button-medium button-link button-with-icon personal-section-edit"
+                [class.view-block-false]="states.states['EditLoginP']"
+                (click)="states.selectEditLogin()">
+          <svg viewBox="0 0 50 50" >
+            <g>
+              <path d="M18.293,31.707h6.414l24-24l-6.414-6.414l-24,24V31.707z M45.879,7.707l-3.586,3.586l-3.586-3.586l3.586-3.586
+		                            L45.879,7.707z M20.293,26.121l17-17l3.586,3.586l-17,17h-3.586V26.121z"/>
+              <polygon points="43.293,19.707 41.293,19.707 41.293,46.707 3.293,46.707 3.293,8.707 31.293,8.707 31.293,6.707 1.293,6.707
+	                            	1.293,48.707 43.293,48.707"/>
+            </g>
+          </svg>
+          <span class="personal-section-edit-text button-edit-false">{{'ACCOUNT.PROFILE.BUTTON.EDIT' | translate}}</span>
+        </button>
+      </div>
+      <div class="error personal-data"
+           [class.view-block-false]="states.states['ErrorFVLogin']">
+        <ul>
+          <li *ngFor="let error of errorsFV">
+            <ul>
+              <li *ngFor="let errorValue of error.value">
+                <p>{{errorValue.errorMessage}}</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="error personal-data"
+           [class.view-block-false]="states.states['ErrorLogin']">
+        <ul>
+          <li *ngFor="let error of errors">
+            <p>{{error.description}}</p>
+          </li>
+        </ul>
+      </div>
+      <form [formGroup]="formLogin">
+        <div class="personal-data">
+          <ul class="personal-data-list">
+            <li class="personal-data-item">
+              <label class="personal-data-label">{{'ACCOUNT.PROFILE.BLOCK-LOGIN.LOGIN' | translate}}</label>
+              <p [class.view-block-false]="states.states['EditLoginP']"
+                 class="personal-data-value">{{user.email}}</p>
+              <div [class.view-block-false]="states.states['EditLoginInput']">
+                <input matInput formControlName="email" type="email" placeholder="{{'PLACEHOLDER.EMAIL' | translate}}">
+                <p class="error-message" *ngIf="login!.invalid">{{getErrorMessageLogin()}}</p>
+              </div>
+            </li>
+          </ul>
+          <div [class.view-block-false]="states.states['EditLoginSuccess']">
+            <p class="success">Successful</p>
+          </div>
+          <div [class.view-block-false]="states.states['EditLoginInput']">
+            <div class="personal-data-footer">
+              <button class="button button-medium button-navy"
+                      [disabled]="!formLogin.valid"
+                      (click)="saveNewLogin()">{{'ACCOUNT.PROFILE.BUTTON.SAVE' | translate}}</button>
+              <button class="button button-medium button-link" (click)="states.selectEditLogin()">{{'ACCOUNT.PROFILE.BUTTON.CANCEL' | translate}}</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <div class="cabinet-other">
+    <section class="personal-section">
+      <div class="account-actions">
+        <h3 class="personal-section-heading other" (click)="changePassword()">
+          {{'ACCOUNT.PROFILE.BUTTON.CHANGE-PASSWORD' | translate}}
+        </h3>
+<!--        <h3 class="personal-section-heading other">-->
+<!--          {{'ACCOUNT.PROFILE.BUTTON.DELETE-ACCOUNT' | translate}}-->
+<!--        </h3>-->
+      </div>
+      <div [class.view-block-false]="states.states['ChangePassword']">
+        <p class="success">Successful</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="empty-space height-medium" style="height: 32px">
+    <span class="empty-space-inner"></span>
+  </div>
+</div>

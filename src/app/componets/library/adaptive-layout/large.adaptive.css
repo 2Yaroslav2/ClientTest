@@ -1,0 +1,5 @@
+@media (min-width: 992px) and (max-width: 1199px){
+  .catalog-grid-cell-type-slim{
+    width: 33.33333% !important;
+  }
+}

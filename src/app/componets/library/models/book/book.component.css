@@ -1,0 +1,12 @@
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+.height-medium{
+  height: 3rem !important;
+}
+
+.head-title{
+  margin-top: 15px;
+  margin-left: 47px
+}

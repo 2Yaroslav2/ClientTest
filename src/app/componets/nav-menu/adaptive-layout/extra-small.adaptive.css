@@ -1,0 +1,46 @@
+@media (max-width: 575px) {
+  .other-size{
+    display: block !important;
+  }
+
+  .head-toolbar{
+    display: none !important;
+  }
+
+  .footer-toolbar{
+    display: none !important;
+  }
+
+  .svg-options{
+    width: 22px !important;
+    height: 22px !important;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .svg-options path{
+    fill: #ffffff;
+  }
+
+  .header-actions{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    right: 35px;
+  }
+
+  .header-actions ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 !important;
+  }
+
+  .header-actions ul li {
+    margin: 5px;
+  }
+
+}

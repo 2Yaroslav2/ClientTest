@@ -1,0 +1,35 @@
+@media (max-width: 575px) {
+  svg{
+    width: 24px;
+    height: 24px;
+  }
+
+  .head-title{
+    margin-left: 0 !important;
+  }
+
+  .container{
+    width: 100% !important;
+    padding: 2% !important;
+  }
+
+  .left-block{
+    display: none !important;
+  }
+
+  .right-block{
+    width: 100% !important;
+  }
+
+  .catalog-grid-cell-type-slim{
+    width: 100% !important;
+  }
+
+  .goods-tile-price-value{
+    font-size: 20px !important;
+  }
+
+  .view-block-false{
+    display: block !important;
+  }
+}

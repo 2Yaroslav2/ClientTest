@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="head-options">
+    <ul class="head">
+      <li>
+        <h3 [routerLinkActive]="['link-active']"
+              [routerLinkActiveOptions]="{ exact: true }"
+              [routerLink]="['/admin/admin-goods']">{{'ADMIN.GOODS' | translate}}</h3>
+      </li>
+      <li>
+        <h3 [routerLinkActive]="['link-active']"
+            [routerLinkActiveOptions]="{ exact: true }"
+            [routerLink]="['/admin/admin-goods-description']">{{'ADMIN.GOODS-DESCRIPTION' | translate}}</h3>
+      </li>
+      <li>
+        <h3 [routerLinkActive]="['link-active']"
+              [routerLinkActiveOptions]="{ exact: true }"
+              [routerLink]="['/admin/admin-orders']">{{'ADMIN.ORDER' | translate}}</h3>
+      </li>
+      <li>
+        <h3 [routerLinkActive]="['link-active']"
+              [routerLinkActiveOptions]="{ exact: true }"
+              [routerLink]="['/admin/admin-close-orders']">{{'ADMIN.CLOSE-ORDER' | translate}}</h3>
+      </li>
+      <li>
+        <h3 [routerLinkActive]="['link-active']"
+              [routerLinkActiveOptions]="{ exact: true }"
+              [routerLink]="['/admin/admin-category']">{{'ADMIN.CATEGORY' | translate}}</h3>
+      </li>
+      <li>
+        <h3 [routerLinkActive]="['link-active']"
+              [routerLinkActiveOptions]="{ exact: true }"
+              [routerLink]="['/admin/admin-language']">{{'ADMIN.LANGUAGE' | translate}}</h3>
+      </li>
+    </ul>
+  </div>
+  <p class="border-line"></p>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

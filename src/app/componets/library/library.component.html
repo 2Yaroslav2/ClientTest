@@ -1,0 +1,66 @@
+<div class="container">
+  <h2 class="head-title">{{'LIBRARY.TITLE' | translate}}</h2>
+  <button class="button button-navy button-small catalog-settings-filter-button view-block-false" type="button">Filter</button>
+  <div class="wrapper">
+    <div class="left-block">
+      <div [formGroup]="filtersFormGroup" class="product-categories-block sidebar-block">
+        <h5 class="widget-title">{{'SHOP.FILTER-NAME-2' | translate}}</h5>
+        <ul class="product-categories">
+          <li formArrayName="filters" *ngFor="let filter of filtersArray.controls; let idx = index">
+            <input class="custom-checkbox" type="checkbox" [formControlName]="idx"/>
+            <label class="custom-checkbox-label">{{categoryService.categories[idx].name}}</label>
+<!--                        <label class="custom-checkbox-label">{{categories[idx].name}}</label>-->
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="right-block">
+      <ul class="catalog-grid">
+        <li class="catalog-grid-cell catalog-grid-cell-type-slim"  *ngFor="let item of goods;">
+          <div class="goods-tile">
+            <div class="goods-tile-inner">
+              <a class="goods-tile-picture">
+                <img src="{{item.srcImg}}" alt="error"/>
+              </a>
+              <div class="goods-tile-colors"></div>
+              <a class="goods-tile-heading">
+                <span class="goods-tile-title">{{item.title}}</span>
+              </a>
+              <div class="goods-tile-prices">
+                <div class="goods-tile-price">
+                  <span class="goods-tile-buy-btn-more-info"
+                        [routerLinkActive]="['link-active']"
+                        [routerLinkActiveOptions]="{ exact: true }"
+                        [routerLink]="['/library/',item.address]"
+                        (click)="viewMoreInfo(item.id, item.categoryId)">
+                   <svg viewBox="0 0 128 128">
+                     <defs>
+                       <style>.cls-1{fill:#2d3e50;}.cls-2{fill:#2e79bd;}</style>
+                     </defs>
+                     <title>{{'SVG-TITLE.MORE-INFO' | translate}}</title>
+                     <path class="cls-1" d="M63.99993,6.0564A57.9436,57.9436,0,1,0,121.9436,63.99993,58.00916,58.00916,
+                     0,0,0,63.99993,6.0564Zm0,104.44631a46.50272,46.50272,0,1,1,46.50278-46.50278A46.55537,46.55537,
+                     0,0,1,63.99993,110.50272Z"/>
+                     <circle class="cls-2" cx="61.48833" cy="39.26524" r="7.74597"/>
+                     <path class="cls-2" d="M56.41651,53.95439A4.60509,4.60509,0,0,0,52.616,58.48922h0a4.60348,4.60348,
+                     0,0,0,4.60463,4.60463H57.677V88.60052H55.21362a3.94011,3.94011,0,0,0-3.94011,3.94011h0a3.94011,
+                     3.94011,0,0,0,3.94011,3.94011H72.78638a3.94011,3.94011,0,0,0,3.94011-3.94011h0a3.94011,3.94011,
+                     0,0,0-3.94011-3.94011H70.34982V56.04026A3.97591,3.97591,0,0,0,65.60173,52.14C61.62628,52.92712,
+                     56.57417,53.92668,56.41651,53.95439Z"/>
+                   </svg>
+               </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="empty-space height-medium" style="height: 32px">
+    <span class="empty-space-inner"></span>
+  </div>
+</div>
+<!--[routerLinkActive]="['link-active']"-->
+<!--[routerLinkActiveOptions]="{ exact: true }"-->
+<!--[routerLink]="['/more-goods-info']"-->

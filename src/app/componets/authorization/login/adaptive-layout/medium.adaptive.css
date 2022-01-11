@@ -1,0 +1,25 @@
+@media (min-width: 768px) and (max-width: 991px){
+  .modal-header{
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .modal-heading{
+    font-size: 24px !important;
+  }
+
+  .modal-content{
+    padding: 24px !important;
+  }
+
+  .auth-modal{
+    flex-direction: row !important;
+  }
+
+  .auth-modal-form{
+    width: 60%;
+    margin-bottom: 0;
+    padding-right: 32px;
+    border-right: 1px solid #e9e9e9;
+  }
+}

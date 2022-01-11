@@ -1,0 +1,25 @@
+@media (max-width: 575px) {
+  .order-heading-flex{
+    align-items: normal !important;
+    flex-direction: column !important;
+
+  }
+  .order-heading-status{
+    width: 100% !important;
+  }
+
+  .order-heading-price{
+    width: 100% !important;
+  }
+
+  .order-heading-goods{
+    justify-content: left !important;
+    width: 100% !important;
+    margin-right: 0px !important;
+  }
+
+  .order-heading-goods-item{
+    width: 180px !important;
+    height: 180px !important;
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "SVG-TITLE": {
+    "BASKET": "Basket",
+    "ADD-IN-BASKET": "Add in basket",
+    "MORE-INFO": "More info",
+    "MY-ORDER": "Order",
+    "PROFILE": "Profile"
+  },
+  "NAV-MENU-HEAD": {
+    "LOGIN": "Login",
+    "LOGOUT": "Logout",
+    "REGISTRATION": "Registration"
+  },
+  "NAV-MENU-FOOTER": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "SHOP": "Shop",
+    "LIBRARY": "Library",
+    "ACCOUNT": "Account",
+    "ADMIN": "Admin"
+  },
+  "LANGUAGES": {
+    "EN": "ENG",
+    "RU": "RU",
+    "UA": "UA"
+  },
+  "HOME": {
+    "SECOND-BLOCK": {
+      "SB-LEFT-TITLE-ONE": "The Best Choice",
+      "SB-LEFT-TITLE-TWO": "How Student Changes Lives and Improves Careers",
+      "SB-LEFT-TEXT": "y choosing Student, you choose quality education on a high international level.\nJoin our program and get a chance to experience the eaching skills\nof our tutors with the latest technology and equipment.",
+      "SB-LEFT-BUTTON": "More About Us"
+    },
+    "THIRD-BLOCK": {
+      "TB-TITLE-ONE": "The Best Choice",
+      "TB-TITLE-TWO": "Popular Courses",
+      "CARD": {
+        "TITLE": "Start English",
+        "CONTENT": " The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.\nA small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally\nbred for hunting.",
+        "BUTTON-MORE": "More",
+        "BUTTON-BUY": "Buy",
+        "PRICE": "Price"
+      }
+    }
+  },
+  "ABOUT": {
+    "FIRST-BLOCK": {
+      "FB-RIGHT-TITLE-ONE": "The Best Choice",
+      "FB-RIGHT-TITLE-TWO": "How Student Changes Lives and Improves Careers",
+      "FB-RIGHT-TEXT": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explore.",
+      "FB-RIGHT-BUTTON": "More About Us"
+    },
+    "SECOND-BLOCK": {
+      "SB-HEAD-TITLE-ONE": "What Do We Do",
+      "SB-HEAD-TITLE-TWO": "Unlimited Possibilities",
+      "SB-LEFT-TITLE": "Online Courses",
+      "SB-LEFT-TEXT": "Choose from hundreds of free training courses, or pay to get certified to complete a course or specialization.",
+      "SB-CENTER-TITLE": "Our Mission",
+      "SB-CENTER-TEXT": "Developing strong vision and mission statements can help stakeholders in your school reach such a common understanding.",
+      "SB-RIGHT-TITLE": "Professional Certificate",
+      "SB-RIGHT-TEXT": "Join the millions of students around the world who are already learning! Find an experienced and suitable instructor only for you.\n"
+    },
+    "THIRD-BLOCK": {
+      "TB-HEAD-TITLE-ONE": "Specialization",
+      "TB-HEAD-TITLE-TWO": "Meet the Team"
+    }
+  },
+  "FOOTER": {
+    "WEB-COLUMN-1": {
+      "CONTACT-DESCRIPTION": "Omnis iste natus sit voluptatem accusanti dolorem laudantium totam rem aperiam."
+    },
+    "WEB-COLUMN-2": {
+      "TITLE": "Title 1",
+      "CONTACT-DESCRIPTION": "Omnis iste natus sit voluptatem accusanti dolorem laudantium totam rem aperiam.",
+      "INFO-1": "Omnis iste natus",
+      "INFO-2": "Omnis iste natus",
+      "INFO-3": "Omnis iste natus"
+    },
+    "WEB-COLUMN-3": {
+      "TITLE": "Title 2",
+      "CONTACT-DESCRIPTION": "Omnis iste natus sit voluptatem accusanti dolorem laudantium totam rem aperiam.",
+      "INFO-1": "Omnis iste natus",
+      "INFO-2": "Omnis iste natus",
+      "INFO-3": "Omnis iste natus"
+    }
+  },
+  "SHOP": {
+    "TITLE": "Catalog",
+    "FILTER-NAME-1": "Price Filter",
+    "FILTER-NAME-2": "Categories"
+  },
+  "LIBRARY": {
+    "TITLE": "Library",
+    "FILTER-NAME-1": "Categories"
+  },
+  "ACCOUNT": {
+    "PROFILE": {
+      "TITLE": "Personal data",
+      "BLOCK-PERSONAL-DATA": {
+        "TITLE": "Personal data",
+        "NAME": "Name"
+      },
+      "BLOCK-CONTACTS": {
+        "TITLE": "Contacts",
+        "EMAIL": "Email"
+      },
+      "BLOCK-LOGIN": {
+        "TITLE": "Login",
+        "LOGIN": "Login(email)"
+      },
+      "BUTTON": {
+        "EDIT": "Edit",
+        "DELETE-ACCOUNT": "Delete account",
+        "CHANGE-PASSWORD": "Change password",
+        "SAVE": "Save",
+        "CANCEL": "Cancel"
+      }
+    },
+    "ORDER": {
+      "TITLE": "Order"
+    }
+  },
+  "BASKET": {
+    "TITLE": "My purchases",
+    "BUTTON": {
+      "TO-ORDER": "To order"
+    }
+  },
+  "AUTH": {
+    "TITLE": "Sign in",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "SIGN-IN": "Sign in",
+    "REMIND-PASSWORD": "Remind password",
+    "REGISTRATION": "Registration",
+    "OR": "or",
+    "SIGN-IN-AS": "Sign in as a user"
+  },
+  "REGISTRATION": {
+    "TITLE": "Registration",
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "DESCRIPTION-PASSWORD": "The password must be at least 6 characters long, contain numbers and Latin letters, including uppercase. ",
+    "CONFIRMED-PASSWORD": "Confirmed password",
+    "SAVE": "Register",
+    "REGISTRATION": "I am already registration",
+    "OR": "or",
+    "SIGN-IN-AS": "Sign in as a user"
+  },
+  "PLACEHOLDER": {
+    "NAME": "Enter your name...",
+    "EMAIL": "Enter your email...",
+    "PASSWORD": "Enter your password...",
+    "CONFIRMED-PASSWORD": "Enter confirmed password...",
+    "OLD-PASSWORD": "Enter your old password...",
+    "NEW-PASSWORD": "Enter your new password...",
+    "NEW-CONFIRM-PASSWORD": "Enter your new confirm password...",
+    "ADD-GOODS": {
+      "NAME": "Enter product name...",
+      "PRICE": "Enter price...",
+      "NUMBER-OF-DAYS": "Enter number of days...",
+      "QUANTITY-IN-STOCK": "Enter quantity in stock...",
+      "CATEGORY-ID": "Enter category id...",
+      "DISCOUNT": "Enter % discount...",
+      "IMAGE": "Enter image..."
+    },
+    "ADD-CATEGORY": {
+      "NAME": "Enter category name...",
+      "LANGUAGE-ID": "Enter language id...",
+      "CATEGORY-ID": "Enter category id..."
+    },
+    "ADD-LANGUAGE": {
+      "NAME": "Enter language..."
+    },
+    "ADD-GOODS-DESCRIPTION": {
+      "GOODS-ID": "Enter goods id...",
+      "DESCRIPTION": "Enter description...",
+      "LANGUAGE-ID": "Enter language id..."
+    },
+    "ADD-CLOSE-ORDER": {
+
+    }
+  },
+  "CHANGE-PASSWORD": {
+    "OLD-PASSWORD": "Old password",
+    "NEW-PASSWORD": "New password",
+    "NEW-CONFIRM-PASSWORD": "New confirm password"
+  },
+  "BUTTON": {
+    "MENU": "Menu",
+    "SAVE": "Confirm",
+    "CANCEL": "Cancel",
+    "REMOVE": "Remove",
+    "EDIT": "Edit",
+    "FILTER": "Filter"
+  },
+  "ADD-GOODS": {
+    "TRANSLATE": {
+      "HEADER": "Add goods",
+      "NAME": "Name",
+      "PRICE": "Price",
+      "NUMBER-OF-DAYS": "Number of days",
+      "QUANTITY-IN-STOCK": "Quantity in stock",
+      "CATEGORY-ID": "Category id",
+      "DISCOUNT": "Discount",
+      "IMAGE": "Image",
+      "SAVE": "Save",
+      "CANCEL": "Cancel"
+    }
+  },
+  "EDIT-GOODS": {
+    "HEADER": "Edit goods"
+  },
+  "ADD-CATEGORY": {
+    "TRANSLATE": {
+      "HEADER": "Add category",
+      "NAME": "Name",
+      "LANGUAGE-ID": "Language id",
+      "CATEGORY-ID": "Category id"
+    }
+  },
+  "EDIT-CATEGORY": {
+    "HEADER": "Edit category"
+  },
+  "ADD-LANGUAGE": {
+    "TRANSLATE": {
+      "HEADER": "Add language",
+      "NAME": "Name"
+    }
+  },
+  "EDIT-LANGUAGE": {
+    "HEADER": "Edit language"
+  },
+  "ADD-GOODS-DESCRIPTION": {
+    "TRANSLATE": {
+      "HEADER": "Add goode description",
+      "GOODS-ID": "Goods id",
+      "LANGUAGE-ID": "Language id",
+      "DESCRIPTION": "Description"
+    }
+  },
+  "EDIT-GOODS-DESCRIPTION": {
+    "HEADER": "Edit goods description"
+  },
+  "ADD-CLOSE-ORDER": {
+
+  },
+  "EDIT-CLOSE-ORDER": {
+
+  },
+  "ADMIN": {
+    "GOODS": "Goods",
+    "ORDER": "Orders",
+    "CATEGORY": "Category",
+    "LANGUAGE": "Language",
+    "CLOSE-ORDER": "Close orders",
+    "GOODS-DESCRIPTION": "Goods description"
+  },
+  "TABLE": {
+    "ERROR": "No data matching the filter:",
+    "GOODS": {
+      "NAME": "Name",
+      "PRICE": "Price",
+      "NUMBER-OF-DAYS": "Num. days",
+      "QUANTITY-IN-STOCK": "Quantity in stock",
+      "CATEGORY-ID": "Category id",
+      "DISCOUNT": "Discount",
+      "COUNT-PURCHASED": "Count purchased",
+      "IMAGE": "Image"
+    },
+    "ORDER": {
+      "NAME": "Name",
+      "ORDER-NUMBER": "Order number",
+      "USER-ID": "User id",
+      "GOODS-ID": "Goods id",
+      "DATE": "Date",
+      "PRICE": "Price",
+      "TOTAL-PRICE": "Total price",
+      "QUANTITY": "Quantity",
+      "CLOSE": "Closed order",
+      "STATUS-ID": "Status id"
+    },
+    "CLOSE-ORDER": {
+      "END-DATE": "End date"
+    },
+    "CATEGORY": {
+      "NAME": "Name",
+      "LANGUAGE-ID": "Language id",
+      "CATEGORY-ID": "Category id"
+    },
+    "LANGUAGE": {
+      "NAME": "Name"
+    },
+    "GOODS-DESCRIPTION":{
+      "GOODS-ID": "Goods id",
+      "LANGUAGE-ID": "Language id",
+      "DESCRIPTION": "Description"
+    }
+  },
+  "MORE-INFO": {
+    "BUY": "Buy",
+    "DESCRIPTION": "Description"
+  }
+}

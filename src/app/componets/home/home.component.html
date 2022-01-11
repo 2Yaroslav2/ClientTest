@@ -1,0 +1,114 @@
+<div class="">
+  <div class="wrapper">
+    <div class="first-block">
+      <img src="../../../assets/home-assets/home3.jpg" style="max-height: 700px" alt="error">
+    </div>
+
+    <div class="empty-space height-medium" style="height: 32px">
+      <span class="empty-space-inner"></span>
+    </div>
+
+    <div class="second-block container">
+      <div class="sb-left-side">
+       <div>
+         <h6 class="sb-left-title-one
+                 sb-left-title-one-font">
+           {{'HOME.SECOND-BLOCK.SB-LEFT-TITLE-ONE' | translate}}</h6>
+         <h2 class="sb-left-title-two
+                 sb-left-title-two-font">
+           {{'HOME.SECOND-BLOCK.SB-LEFT-TITLE-TWO' | translate}}</h2>
+         <p class="sb-left-text">{{'HOME.SECOND-BLOCK.SB-LEFT-TEXT' | translate}}</p>
+         <button class="sb-left-button
+                        sb-left-button-item">
+           {{'HOME.SECOND-BLOCK.SB-LEFT-BUTTON' | translate}}</button>
+       </div>
+      </div>
+      <div class="sb-right-side">
+        <img src="../../../assets/home-assets/student.png">
+      </div>
+    </div>
+
+    <div class="empty-space height-medium" style="height: 32px">
+
+      <span class="empty-space-inner"></span>
+    </div>
+
+    <div style=" background-color: #f5f5f7;">
+      <div class="third-block container">
+        <div class="empty-space height-medium" style="height: 32px">
+          <span class="empty-space-inner"></span>
+        </div>
+        <div class="tb-head">
+          <h6 class="tb-title-one
+                 tb-title-one-font">
+            {{'HOME.THIRD-BLOCK.TB-TITLE-ONE' | translate}}</h6>
+          <h2 class="tb-title-two
+                 tb-title-two-font">
+            {{'HOME.THIRD-BLOCK.TB-TITLE-TWO'| translate}}</h2>
+        </div>
+        <div class="tb-content">
+          <ul class="tb-content">
+            <li *ngFor="let item of goods;" class="card-size">
+              <mat-card>
+                <img mat-card-image height="180px" src="{{item.image}}"/>
+                <mat-card-content>
+                  <a class="goods-tile-heading">
+                    <span class="goods-tile-title">{{item.name}}</span>
+                  </a>
+                  <p>
+                    <span class="goods-tile-price-value">{{'HOME.THIRD-BLOCK.CARD.PRICE' | translate}}: {{item.price}}</span>
+                    <span class="goods-tile-price-currency">₴</span>
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button
+                          (click)="moreInfo(item.id)"
+                          [routerLinkActive]="['link-active']"
+                          [routerLinkActiveOptions]="{ exact: true }"
+                          [routerLink]="['/more-goods-info']">{{'HOME.THIRD-BLOCK.CARD.BUTTON-MORE' | translate}}</button>
+                  <button mat-button (click)="addProductInBasket(item)">{{'HOME.THIRD-BLOCK.CARD.BUTTON-BUY' | translate}}</button>
+                </mat-card-actions>
+              </mat-card>
+            </li>
+          </ul>
+
+<!--          <mat-card class="tb-goods-card">-->
+<!--            <mat-card-header>-->
+<!--              <mat-card-title>{{'HOME.THIRD-BLOCK.CARD.TITLE' | translate}}</mat-card-title>-->
+<!--              <mat-card-subtitle></mat-card-subtitle>-->
+<!--            </mat-card-header>-->
+<!--            <img mat-card-image src="../../../assets/home-assets/spoken-english-language-course.jpg" alt="Photo of a Shiba Inu">-->
+<!--            <mat-card-content>-->
+<!--              <p>{{'HOME.THIRD-BLOCK.CARD.CONTENT' | translate}}</p>-->
+<!--            </mat-card-content>-->
+<!--            <mat-card-actions>-->
+<!--              <button mat-button>{{'HOME.THIRD-BLOCK.CARD.BUTTON-MORE' | translate}}</button>-->
+<!--              <button mat-button>{{'HOME.THIRD-BLOCK.CARD.BUTTON-BUY' | translate}}</button>-->
+<!--            </mat-card-actions>-->
+<!--          </mat-card>-->
+<!--          -->
+<!--          <mat-card class="tb-goods-card">-->
+<!--            <mat-card-header>-->
+<!--              <mat-card-title>{{'HOME.THIRD-BLOCK.CARD.TITLE' | translate}}</mat-card-title>-->
+<!--              <mat-card-subtitle></mat-card-subtitle>-->
+<!--            </mat-card-header>-->
+<!--            <img mat-card-image src="../../../assets/home-assets/spoken-english-language-course.jpg" alt="Photo of a Shiba Inu">-->
+<!--            <mat-card-content>-->
+<!--              <p>{{'HOME.THIRD-BLOCK.CARD.CONTENT' | translate}}</p>-->
+<!--            </mat-card-content>-->
+<!--            <mat-card-actions>-->
+<!--              <button mat-button>{{'HOME.THIRD-BLOCK.CARD.BUTTON-MORE' | translate}}</button>-->
+<!--              <button mat-button>{{'HOME.THIRD-BLOCK.CARD.BUTTON-BUY' | translate}}</button>-->
+<!--            </mat-card-actions>-->
+<!--          </mat-card>-->
+        </div>
+        <div class="empty-space height-medium" style="height: 32px">
+          <span class="empty-space-inner"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fourth-block"></div>
+
+  </div>
+</div>

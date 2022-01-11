@@ -1,0 +1,49 @@
+
+.container{
+  width: 100%;
+  margin: 0 auto;
+}
+.height-medium{
+  height: 3rem !important;
+}
+
+table {
+  user-select: none;
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+
+td, th {
+  width: 5%;
+}
+
+.head-title{
+  margin-top: 15px;
+  margin-left: 47px
+}
+
+.demo-button-container {
+  margin-top: 25px;
+  padding-bottom: 16px;
+}
+
+.demo-button + .demo-button {
+  margin-left: 8px;
+}
+
+.my-button{
+  cursor: pointer;
+}
+
+.button-options{
+}
+
+.button-options button{
+  margin-top: 8px;
+}
+

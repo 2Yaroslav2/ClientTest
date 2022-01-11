@@ -1,0 +1,39 @@
+@media (max-width: 575px) {
+  ::ng-deep .cdk-overlay-pane{
+    max-width: 100% !important;
+  }
+
+  ::ng-deep .mat-dialog-content{
+    max-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  ::ng-deep .mat-dialog-container{
+    padding: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  .auth-modal{
+    flex-direction: column !important;
+  }
+  .auth-modal-form{
+    padding-right: 0 !important;
+    border: none !important;
+    width: 100% !important;
+    margin-bottom: 24px !important;
+  }
+  .auth-modal-social{
+    width: 100% !important;
+  }
+  .auth-modal-divider{
+    display: none !important;
+  }
+
+  .auth-modal-social{
+    padding-left: 0 !important;
+  }
+
+
+
+}

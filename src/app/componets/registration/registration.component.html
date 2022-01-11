@@ -1,0 +1,122 @@
+<mat-dialog-content class="mat-typography">
+  <div class="modal-header">
+    <h3 class="modal-heading">{{'REGISTRATION.TITLE' | translate}}</h3>
+    <button class="modal-close" (click)="closeWindowRegistration()">
+      <svg viewBox="0 0 24 24">
+        <path d="m18.295 7.11511c.3894-.38936.3894-1.02064 0-1.41-.3893-.38936-1.0206-.38936-1.41 0l-4.885
+          4.88499-4.88499-4.88499c-.38936-.38936-1.02063-.38936-1.41 0-.38936.38936-.38936 1.02064 0 1.41l4.88499
+          4.88499-4.88499 4.885c-.38936.3894-.38936 1.0206 0 1.41.38937.3894 1.02064.3894 1.41 0l4.88499-4.885 4.885
+          4.885c.3894.3894 1.0207.3894 1.41 0 .3894-.3894.3894-1.0206 0-1.41l-4.885-4.885z"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="head-title head-title-font" *ngIf="flagErrors">
+    <ul class="error-message">
+      <li *ngFor="let error of errors">
+        <h4>{{error.description}}</h4>
+      </li>
+    </ul>
+  </div>
+  <div class="head-title head-title-font" *ngIf="flagErrorsFV">
+    <ul class="error-message">
+      <li *ngFor="let error of errorsFV">
+        <ul>
+          <li *ngFor="let errorValue of error.value">
+            <p>{{errorValue.errorMessage}}</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="head-title head-title-font" *ngIf="flagErrorZero">
+    <h3 class="error-message">{{errorZero}}</h3>
+  </div>
+
+  <div class="modal-content">
+    <div class="auth-modal">
+      <form class="auth-modal-form" [formGroup]="form">
+        <fieldset>
+          <div class="form-row">
+            <label class="form-label">{{'REGISTRATION.NAME' | translate}}</label>
+            <input formControlName="name" type="text" placeholder="{{'PLACEHOLDER.NAME' | translate}}">
+            <p class="error-message" *ngIf="name!.invalid">{{getErrorMessageName()}}</p>
+          </div>
+          <div class="form-row">
+            <label class="form-label">{{'REGISTRATION.EMAIL' | translate}}</label>
+            <input formControlName="email" type="email" placeholder="{{'PLACEHOLDER.EMAIL' | translate}}">
+            <p class="error-message" *ngIf="email!.invalid">{{getErrorMessageEmail()}}</p>
+          </div>
+          <div class="form-row">
+            <div class="form-row">
+              <label class="form-label">{{'REGISTRATION.PASSWORD' | translate}}</label>
+              <div class="form-row-with-btn">
+                <input formControlName="password"
+                       type="password"
+                       placeholder="{{'PLACEHOLDER.PASSWORD' | translate}}"
+                       [type]="hidePassword ? 'password' : 'text'"/>
+                <button mat-icon-button
+                        matSuffix
+                        (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+                  <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </div>
+              <p class="error-message" *ngIf="password!.invalid">{{getErrorMessagePassword()}}</p>
+              <label class="form-caption">
+                {{'REGISTRATION.DESCRIPTION-PASSWORD' | translate}}
+              </label>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-row">
+              <label class="form-label">{{'REGISTRATION.CONFIRMED-PASSWORD' | translate}}</label>
+              <div class="form-row-with-btn">
+                <input formControlName="passwordConfirm"
+                       type="password"
+                       placeholder="{{'PLACEHOLDER.CONFIRMED-PASSWORD' | translate}}"
+                       [type]="hidePasswordConfirm ? 'password' : 'text'"/>
+                <button mat-icon-button matSuffix (click)="hidePasswordConfirm = !hidePasswordConfirm" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePasswordConfirm">
+                  <mat-icon>{{hidePasswordConfirm ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </div>
+              <p class="error-message" *ngIf="passwordConfirm!.invalid">{{getErrorMessagePasswordConfirm()}}</p>
+            </div>
+          </div>
+          <div class="form-row"></div>
+          <div class="form-row auth-modal-form-bottom">
+            <button [disabled]="!form.valid"
+                    type="submit"
+                    class="button
+                    button-color-green
+                    auth-modal-submit
+                    button-large" (click)="onSave()">{{'REGISTRATION.SAVE' | translate}}</button>
+            <button class="auth-modal-register-link button button-link" (click)="openLogin()">{{'REGISTRATION.REGISTRATION' | translate}}</button>
+          </div>
+        </fieldset>
+        <span class="auth-modal-divider" aria-hidden="true">{{'REGISTRATION.OR' | translate}}</span>
+      </form>
+      <div class="auth-modal-social">
+        <div class="auth-modal-social-buttons">
+          <p class="auth-modal-social-label">{{'REGISTRATION.SIGN-IN-AS' | translate}}</p>
+          <div class="social">
+            <button class="button
+                           button-large
+                           button-with-icon
+                           button-color-gray
+                           auth-modal-social-button" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24">
+                <g fill-rule="evenodd">
+                  <path d="m20.64 12.2047c0-.6382-.0573-1.2518-.1636-1.8409h-8.4764v3.4813h4.8436c-.2086 1.125-.8427 2.0782-1.7959 2.7164v2.2582h2.9087c1.7018-1.5668 2.6836-3.8741 2.6836-6.615z" fill="#4285f4"></path>
+                  <path d="m12 21c2.43 0 4.4673-.8059 5.9564-2.1805l-2.9087-2.2582c-.8059.54-1.8368.8591-3.0477.8591-2.34409 0-4.32818-1.5832-5.03591-3.7104h-3.00681v2.3318c1.4809 2.9413 4.52454 4.9582 8.04272 4.9582z" fill="#34a853"></path>
+                  <path d="m6.96409 13.7101c-.18-.54-.28227-1.1168-.28227-1.71s.10227-1.17.28227-1.71v-2.33185h-3.00682c-.60954 1.215-.95727 2.58955-.95727 4.04185 0 1.4522.34773 2.8268.95727 4.0418z" fill="#fbbc05"></path>
+                  <path d="m12 6.57955c1.3214 0 2.5077.45409 3.4405 1.3459l2.5813-2.58136c-1.5586-1.45227-3.5959-2.34409-6.0218-2.34409-3.51818 0-6.56182 2.01682-8.04272 4.95818l3.00681 2.33182c.70773-2.12727 2.69182-3.71045 5.03591-3.71045z" fill="#ea4335"></path>
+                </g>
+              </svg>
+              Google
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>

@@ -1,0 +1,114 @@
+<div class="container">
+  <h2 class="head-title">{{'SHOP.TITLE' | translate}}</h2>
+  <button class="button
+                 button-navy
+                 button-small
+                 catalog-settings-filter-button
+                 view-block-false" type="button">Filter</button>
+  <div class="wrapper">
+    <div class="left-block">
+<!--      <div class="price-filter sidebar-block">-->
+<!--        <h5 class="widget-title">{{'SHOP.FILTER-NAME-1' | translate}}</h5>-->
+<!--        <div class="slider-filter-inner">-->
+<!--          <input class="slider-filter-input_1 slider-filter-input_2" value="1">-->
+<!--          <span class="slider-filter-divider">-->
+<!--            <svg viewBox="0 0 24 24"-->
+<!--                 fill="none"-->
+<!--                 stroke="#a6a5a5"-->
+<!--                 stroke-width="2"-->
+<!--                 stroke-linecap="round"-->
+<!--                 stroke-linejoin="round"-->
+<!--                 class="feather feather-minus svg-options-2">-->
+<!--              <line x1="5" y1="12" x2="19" y2="12"></line>-->
+<!--            </svg>-->
+<!--          </span>-->
+<!--          <input class="slider-filter-input_1 slider-filter-input_2" value="2">-->
+<!--          <button class="button button-color button-size slider-filter-button">ok</button>-->
+<!--        </div>-->
+<!--        <div class="rz-slider-wrapper">-->
+<!--          <div class="rz-slider">-->
+<!--            <div class="rz-slider-range-center">-->
+<!--              <div class="rz-slider-range-space"></div>-->
+<!--            </div>-->
+<!--            <button class="rz-slider-range-button rz-slider-range-button-type-left" style="left: 0%"></button>-->
+<!--            <button class="rz-slider-range-button rz-slider-range-button-type-right" style="left: 100%"></button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="empty-space height-medium" style="height: 12px">-->
+<!--          <span class="empty-space-inner"></span>-->
+<!--        </div>-->
+<!--      </div>-->
+      <div [formGroup]="filtersFormGroup" class="product-categories-block sidebar-block">
+        <h5 class="widget-title">{{'SHOP.FILTER-NAME-2' | translate}}</h5>
+        <ul class="product-categories">
+          <li formArrayName="filters" *ngFor="let filter of filtersArray.controls; let idx = index">
+            <input class="custom-checkbox" type="checkbox" [formControlName]="idx"/>
+            <label class="custom-checkbox-label">{{categories[idx].name}}</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="right-block">
+     <ul class="catalog-grid">
+       <li class="catalog-grid-cell catalog-grid-cell-type-slim"  *ngFor="let item of goods;">
+         <div class="goods-tile">
+           <div class="goods-tile-inner">
+             <a class="goods-tile-picture">
+               <img src="{{item.image}}" alt="error"/>
+             </a>
+             <div class="goods-tile-colors"></div>
+             <a class="goods-tile-heading">
+               <span class="goods-tile-title">{{item.name}}</span>
+             </a>
+             <div class="goods-tile-prices">
+               <div class="goods-tile-price">
+                 <p>
+                   <span class="goods-tile-price-value">{{item.price}}</span>
+                   <span class="goods-tile-price-currency">₴</span>
+                 </p>
+                 <span class="goods-tile-buy-btn-more-info"
+                       [routerLinkActive]="['link-active']"
+                       [routerLinkActiveOptions]="{ exact: true }"
+                       [routerLink]="['/more-goods-info']" (click)="viewMoreInfo(item.id)">
+                   <svg viewBox="0 0 128 128">
+                     <defs>
+                       <style>.cls-1{fill:#2d3e50;}.cls-2{fill:#2e79bd;}</style>
+                     </defs>
+                     <title>{{'SVG-TITLE.MORE-INFO' | translate}}</title>
+                     <path class="cls-1" d="M63.99993,6.0564A57.9436,57.9436,0,1,0,121.9436,63.99993,58.00916,58.00916,
+                     0,0,0,63.99993,6.0564Zm0,104.44631a46.50272,46.50272,0,1,1,46.50278-46.50278A46.55537,46.55537,
+                     0,0,1,63.99993,110.50272Z"/>
+                     <circle class="cls-2" cx="61.48833" cy="39.26524" r="7.74597"/>
+                     <path class="cls-2" d="M56.41651,53.95439A4.60509,4.60509,0,0,0,52.616,58.48922h0a4.60348,4.60348,
+                     0,0,0,4.60463,4.60463H57.677V88.60052H55.21362a3.94011,3.94011,0,0,0-3.94011,3.94011h0a3.94011,
+                     3.94011,0,0,0,3.94011,3.94011H72.78638a3.94011,3.94011,0,0,0,3.94011-3.94011h0a3.94011,3.94011,
+                     0,0,0-3.94011-3.94011H70.34982V56.04026A3.97591,3.97591,0,0,0,65.60173,52.14C61.62628,52.92712,
+                     56.57417,53.92668,56.41651,53.95439Z"/>
+                   </svg>
+               </span>
+                 <div>
+                    <span class="goods-tile-buy-btn" (click)="addProductInBasket(item)" disabled="">
+                   <svg viewBox="0 0 32 32">
+                     <title>{{'SVG-TITLE.ADD-IN-BASKET' | translate}}</title>
+                     <path d="M24,16c-4.4,0-8,3.6-8,8s3.6,8,8,8s8-3.6,8-8S28.4,16,24,16z M27,25h-2v2c0,0.6-0.4,1-1,1s-1-0.4-1-1v-2h-2	c-0.6,
+                     0-1-0.4-1-1s0.4-1,1-1h2v-2c0-0.6,0.4-1,1-1s1,0.4,1,1v2h2c0.6,0,1,0.4,1,1S27.6,25,27,25z"/>
+                     <path d="M14.2,26c-0.1-0.6-0.2-1.3-0.2-2H7.6C7.3,24,7,23.7,7,23.4c0-0.3,0.2-0.6,0.5-0.6l6.8-1.1c1-4.4,5-7.7,9.7-7.7c1,
+                     0,1.9,0.1,2.8,0.4L28,8.2c0.1-0.5-0.3-1.1-0.8-1.2c-0.5-0.1-1.1,0.3-1.2,0.8L25.8,9H6.6l0-0.1c0.6-1.3,0.6-2.8-0.2-4C5.7,3.7,
+                     4.4,3,3,3H1C0.4,3,0,3.4,0,4s0.4,1,1,1h2c0.7,0,1.4,0.4,1.8,1c0.4,0.6,0.4,1.4,0.1,2L4.1,9.6c0,0,0,0,0,0c0,0.1,0,0.1-0.1,0.2C4,9.8,4,9.9,
+                     4,10c0,0,0,0,0,0c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2l3.8,10.3l-0.6,0.1C5.9,21,5,22.1,5,23.4c0,1,0.5,1.8,1.3,2.3C6.1,26.1,6,26.5,6,27c0,1.7,
+                     1.3,3,3,3s3-1.3,3-3c0-0.4-0.1-0.7-0.2-1H14.2z M9,28c-0.6,0-1-0.4-1-1s0.4-1,1-1s1,0.4,1,1S9.6,28,9,28z"/>
+                   </svg>
+                 </span>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </li>
+     </ul>
+    </div>
+  </div>
+  <div class="empty-space height-medium" style="height: 32px">
+    <span class="empty-space-inner"></span>
+  </div>
+</div>

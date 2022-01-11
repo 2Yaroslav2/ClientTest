@@ -1,0 +1,165 @@
+@import "adaptive-layout/extra-small.adaptive.css";
+@import "adaptive-layout/small.adaptive.css";
+@import "adaptive-layout/medium.adaptive.css";
+
+.other-size{
+  display: none;
+}
+
+.header-button{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-left: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: none;
+  transition: all .2s ease-in-out;
+}
+
+.header-button svg{
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+.other-size-head{
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  user-select: none;
+  align-items: center;
+  background-color: #1f1c1c;
+  color: #fff;
+}
+
+.font-nav{
+  font-weight: 400;
+  font-size: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 32px;
+  /*font-family: Roboto, "Helvetica Neue", sans-serif;*/
+  font-family: "Montserrat",sans-serif;
+}
+
+
+.sticky{
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.head-toolbar{
+  display: flex;
+  justify-content: right;
+  height: 64px;
+  user-select: none;
+  align-items: center;
+  background-color: #1f1c1c;
+  color: #fff;
+
+}
+
+.footer-toolbar{
+  display: flex;
+  align-items: center;
+  height: 64px;
+  user-select: none;
+}
+
+.head-toolbar-1{
+  display: flex;
+  align-items: center;
+}
+
+.footer-toolbar {
+  background-color: #fff;
+}
+
+.menu-head,
+.menu-footer {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  flex-wrap: nowrap;
+}
+
+.menu-head {
+  justify-content: right;
+}
+
+.menu-footer {
+  justify-content: right;
+}
+
+.menu-footer-left{
+  text-align: left;
+}
+
+.menu-footer-right{
+  text-align: right;
+}
+
+.menu-head li {
+  margin: 5px;
+  padding: 5px;
+}
+
+.menu-footer li {
+  margin: 5px;
+  padding: 5px;
+}
+
+.menu-head li:hover{
+  color: #fc6b4f ;
+  cursor: pointer;
+}
+
+.menu-footer li:hover{
+ color: #fc6b4f ;
+  cursor: pointer;
+}
+
+.vc_column-inner{
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+.svg-options{
+  width: 28px;
+  height: 28px;
+}
+
+.svg-options path:hover{
+  fill: #fc6b4f;
+}
+
+.language-options{
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.language-options:hover{
+  color: #fc6b4f;
+}
+
+
+.language-options option{
+  background-color: transparent;
+  color: #111111;
+}
+
+.mat-badge-content{
+  top: -25px !important;
+}

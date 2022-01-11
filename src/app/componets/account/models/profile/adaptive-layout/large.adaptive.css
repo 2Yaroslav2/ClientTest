@@ -1,0 +1,8 @@
+@media (min-width: 992px) and (max-width: 1199px){
+  .personal-data-item{
+    width: 80% !important;
+    margin-bottom: 16px !important;
+    padding: 0px !important;
+  }
+
+}

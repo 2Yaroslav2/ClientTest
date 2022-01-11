@@ -1,0 +1,53 @@
+@media (min-width: 768px) and (max-width: 991px){
+
+  /*.body-center{*/
+  /*  width: auto !important;*/
+  /*  margin-right: 10px !important;*/
+  /*}*/
+
+  ::ng-deep .cdk-overlay-pane{
+    max-width: 100% !important;
+  }
+
+  ::ng-deep .mat-dialog-content{
+    max-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  ::ng-deep .mat-dialog-container{
+    padding: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  .container{
+    padding: 16px;
+    min-width: 500px;
+    width: auto !important;
+  }
+
+
+  .basket-head{
+    font-size: 20px !important;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .body-left{
+  }
+
+  .body-left img{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .body-center{
+    width: auto !important;
+    margin-right: 10px !important;
+  }
+
+  .cart-receipt-sum{
+    margin-bottom: 16px !important;
+  }
+
+}

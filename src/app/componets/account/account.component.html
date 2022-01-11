@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="line view-block-false">
+    <button mat-button
+            [matMenuTriggerFor]="menu"
+            class="button button-navy button-small catalog-settings-filter-button"
+            type="button">{{'BUTTON.MENU' | translate}}</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item
+              [routerLinkActive]="['link-active']"
+              [routerLinkActiveOptions]="{ exact: true }"
+              [routerLink]="['/account/profile']">{{'SVG-TITLE.PROFILE' | translate}}</button>
+      <button mat-menu-item
+              [routerLinkActive]="['link-active']"
+              [routerLinkActiveOptions]="{ exact: true }"
+              [routerLink]="['/account/order']">{{'SVG-TITLE.MY-ORDER' | translate}}</button>
+    </mat-menu>
+
+  </div>
+  <div class="wrapper">
+    <div class="left-block">
+      <div class="cabinet-user">
+        <a class="cabinet-navigation-link
+                  cabinet-navigation-link-type-user"
+           [class.cabinet-navigation-link-state-active]="states.states['Profile']"
+           [routerLinkActive]="['link-active']"
+           [routerLinkActiveOptions]="{ exact: true }"
+           [routerLink]="['/account/profile']"
+           (click)="states.selectProfile()">
+          <div class="cabinet-navigation-icon"
+               [class.cabinet-navigation-icon-type-avatar]="states.states['ProfileIconAvatar']">
+            <svg viewBox="0 0 24 24">
+              <title>{{'SVG-TITLE.PROFILE' | translate}}</title>
+              <path fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 2C6.47715 2 2 6.47715 2 12C2 14.2173 2.72083 16.2651 3.94221 17.9235C4.92261 16.0046 6.57304
+                    14.4833 8.58609 13.6645C7.59985 12.7521 6.98201 11.449 6.98201 10C6.98201 7.23435 9.23287 5 12
+                    5C14.7671 5 17.018 7.23435 17.018 10C17.018 11.449 16.4001 12.7521 15.4139 13.6645C17.427 14.4833
+                    19.0774 16.0046 20.0578 17.9235C21.2792 16.2651 22 14.2173 22 12C22 6.47715 17.5228 2 12 2ZM18.5844
+                    19.5265C17.5805 16.8826 15.0118 15 12 15C8.98818 15 6.41953 16.8826 5.41557 19.5265C7.17529 21.0674
+                    9.47791 22 12 22C14.5221 22 16.8247 21.0674 18.5844 19.5265ZM0 12C0 5.37258 5.37258 0 12 0C18.6274
+                    0 24 5.37258 24 12C24 15.3377 22.6361 18.3586 20.4376 20.5327C18.271 22.6753 15.2892 24 12 24C8.71079
+                    24 5.72901 22.6753 3.56237 20.5327C1.36394 18.3586 0 15.3377 0 12ZM12 7C10.329 7 8.98201 8.34737
+                    8.98201 10C8.98201 11.6526 10.329 13 12 13C13.671 13 15.018 11.6526 15.018 10C15.018 8.34737 13.671 7 12 7Z"
+                    fill="#293644"/>
+            </svg>
+          </div>
+          <div class="cabinet-user-body">
+            <p class="cabinet-user-name">user name</p>
+            <p class="cabinet-user-email">user email</p>
+          </div>
+        </a>
+      </div>
+      <div>
+        <ul class="cabinet-navigation-list ">
+          <li class="cabinet-navigation-item">
+            <a [routerLinkActive]="['link-active']"
+               [routerLinkActiveOptions]="{ exact: true }"
+               [routerLink]="['/account/order']"
+               class="cabinet-navigation-link"
+               [class.cabinet-navigation-link-state-active]="states.states['Orders']"
+               (click)="states.selectOrder()">
+              <div class="cabinet-navigation-icon"
+                   [class.cabinet-navigation-icon-type-avatar]="states.states['OrdersIconAvatar']">
+                <svg viewBox="0 0 24 24">
+                  <defs>
+                    <style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style>
+                  </defs>
+                  <title>{{'SVG-TITLE.MY-ORDER' | translate}}</title>
+                  <g id="_71.list" data-name="71.list">
+                    <rect class="cls-1" x="1" y="1" width="22" height="22" rx="3" ry="3"/>
+                    <line class="cls-1" x1="6" y1="7" x2="7" y2="7"/>
+                    <line class="cls-1" x1="11" y1="7" x2="18" y2="7"/>
+                    <line class="cls-1" x1="6" y1="12" x2="7" y2="12"/>
+                    <line class="cls-1" x1="11" y1="12" x2="18" y2="12"/>
+                    <line class="cls-1" x1="6" y1="17" x2="7" y2="17"/>
+                    <line class="cls-1" x1="11" y1="17" x2="18" y2="17"/></g>
+                </svg>
+              </div>
+              <span>{{'SVG-TITLE.MY-ORDER' | translate}}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="right-block">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

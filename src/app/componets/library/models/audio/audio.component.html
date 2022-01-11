@@ -1,0 +1,27 @@
+<div class="container">
+  <h3 class="head-title">Some audio lesson</h3>
+  <div class="audio-block">
+    <div class="size-audio-player">
+      <ngx-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" [autoPlay]="false"
+                        muted="muted" [displayPlaylist]="msaapDisplayPlayList"
+                        (trackEnded)="onEnded({event : $event})"
+                        [displayVolumeControls]="msaapDisplayVolumeControls" [displayRepeatControls]="msaapDisplayRepeatControls"
+                        [disablePositionSlider]="msaapDisablePositionSlider" [displayArtist]="msaapDisplayArtist"
+                        [displayDuration]="msaapDisplayDuration" [expanded]="true"></ngx-audio-player>
+    </div>
+  </div>
+  <div class="empty-space height-medium" style="height: 32px">
+    <span class="empty-space-inner"></span>
+  </div>
+  <div class="footer">
+    <div class="product-about-description">
+      <h3 class="product-tabs-heading">
+        {{'MORE-INFO.DESCRIPTION' | translate}}
+        <span class="product-tabs-heading-color">product name</span>
+      </h3>
+      <div class="product-about-description-context text">
+        <p>description</p>
+      </div>
+    </div>
+  </div>
+</div>

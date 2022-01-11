@@ -1,0 +1,22 @@
+@media (max-width: 575px){
+
+  .second-block{
+    padding: 0% !important;
+    flex-direction: column;
+  }
+  .sb-left-side{
+    width: 100% !important;
+    flex-direction: row !important;
+  }
+  .sb-right-side{
+    width: 100% !important;
+  }
+
+  .sb-left-side{
+    margin-bottom: 20px;
+  }
+
+  .tb-content{
+    flex-direction: column !important;
+  }
+}

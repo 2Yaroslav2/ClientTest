@@ -1,0 +1,93 @@
+<mat-dialog-content>
+  <div class="content-size">
+    <div class="container">
+      <div class="modal-header">
+        <h2 mat-dialog-title class="basket-head">{{'BASKET.TITLE' | translate}}</h2>
+        <button class="modal-close" (click)="closeWindowLogin()" type="button">
+          <svg viewBox="0 0 24 24">
+            <path d="m18.295 7.11511c.3894-.38936.3894-1.02064 0-1.41-.3893-.38936-1.0206-.38936-1.41 0l-4.885
+          4.88499-4.88499-4.88499c-.38936-.38936-1.02063-.38936-1.41 0-.38936.38936-.38936 1.02064 0 1.41l4.88499
+          4.88499-4.88499 4.885c-.38936.3894-.38936 1.0206 0 1.41.38937.3894 1.02064.3894 1.41 0l4.88499-4.885 4.885
+          4.885c.3894.3894 1.0207.3894 1.41 0 .3894-.3894.3894-1.0206 0-1.41l-4.885-4.885z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="cart-notifications"></div>
+      <div class="wrapper">
+        <ul class="cart-list">
+          <li class="cart-list-item" *ngFor = "let item of items;">
+            <div class="cart-product">
+              <div class="cart-content-block">
+                <div class="cart-product-body">
+                  <div class="body-left">
+                    <a class="cart-product-picture">
+                      <img src="{{item.srcImg}}">
+                    </a>
+                  </div>
+                  <div class="body-center">
+                    <span>{{item.title}}</span>
+                  </div>
+                  <div class="body-right">
+                 <span class="" (click)="removeItem(item)">
+                   <svg viewBox="0 0 512 512" class="svg-options">
+                     <path d="M437.5,386.6L306.9,256l130.6-130.6c14.1-14.1,14.1-36.8,0-50.9c-14.1-14.1-36.8-14.1-50.9,
+                     0L256,205.1L125.4,74.5  c-14.1-14.1-36.8-14.1-50.9,0c-14.1,14.1-14.1,36.8,0,50.9L205.1,256L74.5,
+                     386.6c-14.1,14.1-14.1,36.8,0,50.9  c14.1,14.1,36.8,14.1,50.9,0L256,306.9l130.6,130.6c14.1,14.1,36.8
+                     ,14.1,50.9,0C451.5,423.4,451.5,400.6,437.5,386.6z"/>
+                   </svg>
+                 </span>
+                  </div>
+                </div>
+                <div class="cart-product-footer">
+                  <div class="cart-product-counter">
+                 <span class="cart-btn-size cart-btn-color cart-counter-btn" (click)="reduceCount(item)">
+                   <svg viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#111111"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-minus svg-options-2">
+                     <line x1="5" y1="12" x2="19" y2="12"></line>
+                   </svg>
+                 </span>
+                    <input disabled class="cart-counter-input_1 cart-counter-input_2" value="{{item.quantity}}">
+                    <span class="cart-btn-size cart-btn-color cart-counter-btn" (click)="addCount(item)">
+                   <svg viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#111111"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-plus svg-options-2">
+                     <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
+                   </svg>
+                 </span>
+                  </div>
+                  <div class="cart-product-coast">
+                 <span class="cart-product-price">{{item.price}}
+                   <span>₴</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-receipt">
+          <div class="cart-receipt-sum">
+            <div class="cart-receipt-price">
+              <span>{{totalPrice}}</span>
+              <span class="cart-receipt-sum-currency">₴</span>
+            </div>
+          </div>
+          <span class="button button-color-green button-size-large cart-receipt-submit">{{'BASKET.BUTTON.TO-ORDER' | translate}}</span>
+        </div>
+      </div>
+      <div class="empty-space height-medium" style="height: 32px">
+        <span class="empty-space-inner"></span>
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>

@@ -1,0 +1,49 @@
+@import "adaptive-layout/extra-small.adaptive.css";
+@import "adaptive-layout/small.adaptive.css";
+@import "adaptive-layout/medium.adaptive.css";
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+li{
+  list-style: none;
+}
+
+.head-options{
+  margin-top: 20px;
+}
+
+
+.head{
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0px;
+  flex-wrap: nowrap;
+  user-select: none;
+  cursor: pointer;
+}
+.head li{
+  border: 1px solid #e9e9e9;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  padding: 5px;
+  height: auto;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.head li:hover{
+  color: #fc6b4f;
+}
+
+.head li h3{
+  margin-bottom: 0px !important;
+}
+
+.border-line{
+  margin-top: 15px;
+  border-bottom: 1px solid #e9e9e9;
+}

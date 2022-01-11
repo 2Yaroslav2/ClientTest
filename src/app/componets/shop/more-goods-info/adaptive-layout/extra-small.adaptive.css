@@ -1,0 +1,36 @@
+@media (max-width: 575px) {
+  .container{
+    width: 100% !important;
+  }
+
+  .product-title{
+    font-size: 24px !important;
+    line-height: 24px !important;
+  }
+
+  .product-about-left{
+    width: 90% !important;
+    padding: 0px !important;
+  }
+
+  .head{
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-about-right{
+    width: 80% !important;
+    padding: 0px !important;
+    margin-top: 15px;
+  }
+
+  .product-tabs-heading{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .product-about-description-context{
+    margin: 10px;
+  }
+}

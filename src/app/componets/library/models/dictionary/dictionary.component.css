@@ -1,0 +1,33 @@
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+.height-medium{
+  height: 3rem !important;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+
+td, th {
+  width: auto;
+}
+
+.head-title{
+  margin-top: 15px;
+  margin-left: 47px
+}
+
+.dictionary-size{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

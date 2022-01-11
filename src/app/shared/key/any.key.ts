@@ -1,0 +1,9 @@
+export const USER_KEY = 'user';
+export const LOGIN_KEY = 'login';
+export const BASKET_KEY = 'basket';
+export const GOODS_KEY = 'goods';
+export const ORDER_KEY = 'order';
+export const GOODS_DESCRIPTION_KEY = 'goodsDescription';
+export const LANGUAGE_KEY = 'language';
+export const CATEGORY_KEY = 'category';
+export const CURRENT_LANGUAGE_KEY = 'currentLanguage';
